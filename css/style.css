@@ -1,0 +1,563 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+
+  color: white;
+  background-color: white;
+
+  font: 16px/1.5 "Roboto", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+
+  color: white;
+}
+
+a:focus {
+  outline: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header {
+  padding: 20px;
+
+  border-bottom: 1px solid white;
+  background: linear-gradient(to right, rgb(41, 55, 68) 0%, rgb(5, 9, 29) 100%);
+}
+
+.header__logo {
+  font-size: 16px;
+}
+
+.header__about {
+  font-size: 22px;
+}
+
+.header__phone {
+  padding: 0 0 0 30px;
+
+  background-image: url(../img/call.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.header__phone:hover {
+  opacity: 0.8;
+}
+
+.header__phone:active {
+  opacity: 1;
+}
+
+.first-content {
+  position: relative;
+
+  padding: 90px 20px;
+
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
+}
+
+.first-content::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+
+  opacity: 0.1;
+  background-image: url(../img/engine-min.jpg);
+  background-position: top center;
+  /* background-image: url(../img/spare-parts-car.jpg); */
+  background-size: cover;
+}
+
+.first-content::before {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+
+  background: linear-gradient(to right, rgb(41, 55, 68) 0%, rgb(5, 9, 29) 100%);
+}
+
+.first-content__title {
+  text-align: center;
+
+  font-size: 30px;
+}
+
+.first-content__button {
+  display: block;
+
+  max-width: 240px;
+  margin: 50px auto;
+  padding: 20px 30px;
+
+  text-align: center;
+
+  color: #212a38;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: rgb(149, 151, 170);
+
+  font-size: 20px;
+}
+
+.first-content__button:hover {
+  background: rgb(216, 218, 241);
+}
+
+.first-content__button:active {
+  background-color: white;
+}
+
+.first-content__par {
+  padding: 30px 0 0 0;
+
+  text-align: center;
+
+  font-size: 18px;
+}
+
+.first-content__contacts {
+  justify-content: space-evenly;
+
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 0 40px 0;
+
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.first-content__contacts .contacts__item {
+  margin: 0 0 0 10px;
+}
+.contacts__item:hover {
+  opacity: 0.7;
+}
+
+.contacts__item {
+  padding: 0 0 0 30px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.contacts__item--phone {
+  background-image: url(../img/call.png);
+}
+
+.contacts__item--vk {
+  background-image: url(../img/vkontakte.svg);
+}
+
+.contacts__item--ig {
+  background-image: url(../img/ig.svg);
+}
+
+.contacts__item--wp {
+  background-image: url(../img/wp.svg);
+}
+
+.contacts__item--vb {
+  background-image: url(../img/vb.svg);
+}
+
+.contacts__item--tg {
+  background-image: url(../img/tg.svg);
+}
+
+.about-us {
+  padding: 80px 20px;
+
+  color: #212a38;
+  /* border: 7px dotted rgb(5, 9, 29); */
+}
+
+.about-us__title {
+  text-align: center;
+
+  font-size: 30px;
+}
+
+.about-us__list {
+  align-items: stretch;
+  justify-content: space-evenly;
+
+  margin: 0 auto;
+}
+
+.about-us__item {
+  width: 130px;
+  margin: 40px 15px 0;
+  padding: 110px 5px 5px;
+
+  text-align: center;
+
+  border: 3px solid #212a38;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center 5px;
+  background-size: 100px;
+
+  font-size: 14px;
+}
+
+.about-us__item--delivery {
+  background-image: url(../img/fast-delivery.png);
+}
+
+.about-us__item--price {
+  background-image: url(../img/discount.png);
+}
+
+.about-us__item--service {
+  background-image: url(../img/car.png);
+}
+
+.about-us__item--parts {
+  background-image: url(../img/car-parts.png);
+}
+
+.about-us__item--agent {
+  background-image: url(../img/male.png);
+}
+
+.about-work {
+  padding: 80px 20px;
+
+  color: #212a38;
+  border-top: 7px dotted rgb(5, 9, 29);
+}
+
+.about-work__title {
+  text-align: center;
+
+  font-size: 30px;
+}
+
+.about-work__list {
+  align-items: stretch;
+  justify-content: space-evenly;
+
+  list-style-type: none;
+
+  counter-reset: num;
+}
+
+.about-work__list li:before {
+  position: absolute;
+  top: -55px;
+  left: 30%;
+
+  display: inline-block;
+
+  width: 50px;
+
+  content: counter(num);
+  counter-increment: num;
+  text-align: center;
+
+  font-size: 40px;
+}
+
+.about-work__item {
+  position: relative;
+
+  display: flex;
+
+  width: 130px;
+  margin: 75px 0 0;
+  padding: 110px 0 0;
+
+  text-align: center;
+
+  border: 3px solid #212a38;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center 5px;
+  background-size: 100px;
+
+  font-size: 14px;
+}
+
+.about-work__item p {
+  margin: auto;
+}
+
+.about-work__item--call-us {
+  background-image: url(../img/support.png);
+}
+
+.about-work__item--selection {
+  background-image: url(../img/loupe.png);
+}
+
+.about-work__item--price {
+  background-image: url(../img/best-price.png);
+}
+
+.about-work__item--order {
+  background-image: url(../img/payment-method.png);
+}
+
+.about-work__item--delivery {
+  background-image: url(../img/parcel.png);
+}
+
+.address {
+  position: relative;
+
+  width: 100%;
+
+  border-bottom: 1px solid white;
+}
+
+.address::before {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+
+  background: linear-gradient(to right, rgb(41, 55, 68) 0%, rgb(5, 9, 29) 100%);
+}
+
+.address::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+
+  opacity: 0.1;
+  background-image: url(../img/spare-parts-min.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.address__title {
+  padding: 80px 0 0 0;
+
+  text-align: center;
+
+  font-size: 30px;
+}
+
+.address__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 60px 20px 80px;
+}
+
+.address__time-title {
+  margin: 0 0 20px 0;
+}
+
+.address__contacts-title {
+  margin: 0 0 20px 0;
+}
+
+.address__location {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 75%;
+}
+
+.address__map {
+  width: 70%;
+  height: 600px;
+
+  font-size: 18px;
+}
+
+.address__map-title {
+  font-size: 18px;
+}
+.address__map-desc {
+  font-size: 14px;
+}
+
+ymaps {
+  border-radius: 5px;
+}
+
+.footer {
+  margin: 0;
+}
+
+.footer__text {
+  padding: 20px;
+
+  text-align: center;
+
+  color: black;
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .about-us__item {
+    margin: 40px 40px 0;
+  }
+
+  .about-work__item {
+    margin: 75px 50px 0;
+  }
+
+  .address__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .address__contacts {
+    width: 100%;
+  }
+
+  .address__contacts-title {
+    text-align: center;
+  }
+
+  .address__contacts ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .address__location {
+    width: 100%;
+    padding: 40px 0 0;
+
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header .flex {
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .header__about {
+    display: none;
+  }
+
+  .header__logo {
+    width: 100%;
+    padding: 0 0 20px;
+
+    font-size: 24px;
+  }
+
+  .address__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .address__contacts {
+    order: 2;
+
+    padding: 40px 0 0;
+  }
+
+  .address__contacts ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .address__contacts ul li {
+    margin: 10px;
+  }
+
+  .address__location {
+    flex-wrap: wrap;
+
+    width: 100%;
+  }
+
+  .address__map {
+    width: 100%;
+  }
+}
